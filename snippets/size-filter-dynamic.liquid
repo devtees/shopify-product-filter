@@ -1,0 +1,19 @@
+<div class="size-filter clearfix">
+  <h3>Filter by available size:</h3>
+  <nav class="size-options">
+    <a href="#" class="size-filter-option js-current-filter">All</a>
+
+    {% assign available_sizes = '' %}
+    {% for product in collections.frontpage.products limit: limit %}
+      {% for variant in product.variants %}
+        {% unless available_sizes contains variant.title %}
+          {% if  variant.available %}
+             {% capture available_sizes %}{{ available_sizes }}, {{ variant.title }}{% endcapture %}
+            <a href="#" class="size-filter-option">{{ variant.title }}</a>
+          {% endif %}
+        {% endunless %}
+      {% endfor %}
+    {% endfor %}
+
+  </nav>
+</div>
