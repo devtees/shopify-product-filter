@@ -1,0 +1,48 @@
+// product filter styles
+// -------------------------------------------/
+
+.size-filter {
+  margin: 0 15px 25px;
+  text-align: center;
+
+  > h3 {
+    font-weight: 300;
+    letter-spacing: -1px;
+    display: inline-block;
+    color: $black;
+    margin: 0 10px 0 0;
+    line-height: 36px;
+    font-size: 20px;
+  }
+
+  .size-options { display: inline-block; }
+
+  .size-filter-option {
+    text-decoration: none;
+    background: #d3d9dc;
+    color: #6c7277;
+    padding: 4px 10px;
+    border-radius: 5px;
+    margin-left: 2px;
+    margin-bottom: 6px;
+    min-width: 30px;
+    display: inline-block;
+    text-align: center;
+    font-weight: 300;
+    font-size: 18px;
+
+    &:hover,
+    &:active,
+    &.js-current-filter {
+      background: #0099ff;
+      color: white;
+      opacity: 1;
+    }
+
+    &.js-not-filtering {
+      opacity: .5;
+    }
+  }
+}
+
+// end product filter styles ------------/
