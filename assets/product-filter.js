@@ -16,6 +16,7 @@ $(document).ready(function(){
 
     // Handle the products to filter -------------->
 
+    // grab the variant title and make it the filter value
     var filteringBy = $(this).text();
     filteringBy = "size-" + filteringBy;
 
