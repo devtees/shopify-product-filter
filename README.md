@@ -49,3 +49,5 @@ Found a bug? Want to improve the jQuery or Liquid logic? Pull requests welcome!
 See the [contributing docs](CONTRIBUTING.md) for contribution guidelines and more ways to contribute.
 
 ## License
+
+This project is available freely under the terms of [The MIT License](LICENSE).
