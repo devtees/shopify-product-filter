@@ -18,11 +18,11 @@ By default the filter will work with a size variant if that's the only variant y
 
 ### Where to put the code
 
-1. Put `snippets/size-filter.liquid` and `snippets/size-filter-dynamic.liquid` into your Shopify `snippets` directory.
+1. Put [`snippets/size-filter.liquid`](snippets/size-filter.liquid) and [`snippets/size-filter-dynamic.liquid`](snippets/size-filter-dynamic.liquid) into your Shopify `snippets` directory.
 
-2. Put `assets/product-filter.js` into your `assets` directory, and be sure to include it in your theme's `layout/theme.liquid` file in the document `<head>` in script tags. Alternatively, you could instead copy the contents inside the `$(document).ready(function(){...});` and paste it into your existing `scripts.js` file. Also, be sure you are including jQuery in your shop's theme as well.
+2. Put [`assets/product-filter.js`](assets/product-filter.js) into your `assets` directory, and be sure to include it in your theme's `layout/theme.liquid` file in the document `<head>` in script tags. Alternatively, you could instead copy the contents inside the `$(document).ready(function(){...});` and paste it into your existing `scripts.js` file. Also, be sure you are including jQuery in your shop's theme as well.
 
-3. If you are going use the provided default styles, then include `assets/product-filter.css.liquid` in your `assets` directory, and be sure to link to it from your `layout/theme.liquid` file. Alternatively you could simply include the styles in your existing `.css.liquid` file.
+3. If you are going use the provided default styles, then include [`assets/product-filter.css.liquid`](assets/product-filter.css.liquid) in your `assets` directory, and be sure to link to it from your `layout/theme.liquid` file. Alternatively you could simply include the styles in your existing `.css.liquid` file.
 
 4. Next you need to output the variant options as classnames in your `product-loop.liquid` file so the filter buttons will have something to trigger. Add the following values to the class attribute on your `div.product` or corresponding markup:
 
