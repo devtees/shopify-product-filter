@@ -24,7 +24,25 @@ By default the filter will work with a size variant if that's the only variant y
 
 3. If you are going use the provided default styles, then include `assets/product-filter.css.liquid` in your `assets` directory, and be sure to link to it from your `layout/theme.liquid` file. Alternatively you could simply include the styles in your existing `.css.liquid` file.
 
-4. Finally, you need to include the `size-filter.liquid` (or `size-filter-dynamic.liquid` if you want a dynamically generated menu; [more on that below](#static-or-dynamic-menu)). Just use `{% include 'size-filter' %}` to include the filter menu wherever you'd like it to appear. In devtees.com example I've put it in `templates/index.liquid`, but you could instead put it in `templates/collection.liquid` if you wanted it to appear on every collection page. I just wanted it on the frontpage collection.
+4. Next you need to output the variant options as classnames in your `product-loop.liquid` file so the filter buttons will have something to trigger. Add the following values to the class attribute on your `div.product` or corresponding markup:
+
+```liquid
+js-size-filter {% for variant in product.variants %}{% if variant.available %}size-{{ variant.title }} {% endif %}{% endfor %}
+```
+
+5. Finally, you need to include the `size-filter.liquid` (or `size-filter-dynamic.liquid` if you want a dynamically generated menu; [more on that below](#static-or-dynamic-menu)). Just use `{% include 'size-filter' %}` to include the filter menu wherever you'd like it to appear. In devtees.com example I've put it in `templates/index.liquid`, but you could instead put it in `templates/collection.liquid` if you wanted it to appear on every collection page. I just wanted it on the frontpage collection. E.g.:
+
+```liquid
+<!-- start featured product -->
+
+  <div class="clearfix helper-section">
+
+    {% include 'size-filter' %}
+
+    {% if collections[settings.frontpage_collection].products.size == 0 %}
+
+    {% else %}
+```
 
 ### Static or dynamic menu?
 
@@ -42,12 +60,12 @@ Note: the default styles I've provided use Sass, as it's now supported by Shopif
 
 One of the biggest limitations of this filter is that - because of how Shopify product variants work - in order for the filter to work your product variants must be formatted just right, or else the filter will fail. The filter relies on outputing your variant titles to a classname on the product listing, which it looks for to either hide or show when a filter nav button is clicked.
 
-Consequently you must:
+*Consequently you must:*
 
 1. Not include spaces in your variant names
 2. Write your variant names as you want them to appear in the filter menu
 
-PROTIP: If you need to edit your product variants en masse, you can export your products from the Shopify Admin "Product" dashboard as a CSV file, do a find & replace to mass edit, them import it back into your shop. More on that in the [Shopify docs here](http://docs.shopify.com/manual/your-store/products/product-csv).
+**PROTIP**: If you need to edit your product variants en masse, you can export your products from the Shopify Admin "Product" dashboard as a CSV file, do a find & replace to mass edit, them import it back into your shop. More on that in the [Shopify docs here](http://docs.shopify.com/manual/your-store/products/product-csv).
 
 ## Resources
 
