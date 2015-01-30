@@ -26,13 +26,13 @@ By default the filter will work with a size variant if that's the only variant y
 
 4. Next you need to output the variant options as classnames in your `product-loop.liquid` file so the filter buttons will have something to trigger. Add the following values to the class attribute on your `div.product` or corresponding markup:
 
-```liquid
+```html
 js-size-filter {% for variant in product.variants %}{% if variant.available %}size-{{ variant.title }} {% endif %}{% endfor %}
 ```
 
 5. Finally, you need to include the `size-filter.liquid` (or `size-filter-dynamic.liquid` if you want a dynamically generated menu; [more on that below](#static-or-dynamic-menu)). Just use `{% include 'size-filter' %}` to include the filter menu wherever you'd like it to appear. In devtees.com example I've put it in `templates/index.liquid`, but you could instead put it in `templates/collection.liquid` if you wanted it to appear on every collection page. I just wanted it on the frontpage collection. E.g.:
 
-```liquid
+```html
 <!-- start featured product -->
 
   <div class="clearfix helper-section">
