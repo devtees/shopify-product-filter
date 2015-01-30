@@ -1,6 +1,8 @@
 # Shopify Product Filter
 
-*A simple, jQuery based product variant filter for Shopify stores, as seen on [devtees.com](http://devtees.com).*
+*A simple, jQuery based product variant filter for Shopify stores*
+
+**DEMO**  See it in action at: **[devtees.com](http://devtees.com).**
 
 ![img](assets/screenshot.jpg)
 
