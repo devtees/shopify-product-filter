@@ -1,6 +1,6 @@
 # Shopify Product Filter
 
-*A simple, jQuery based product variant filter for Shopify stores, based on [devtees.com](http://devtees.com).*
+*A simple, jQuery based product variant filter for Shopify stores, as seen on [devtees.com](http://devtees.com).*
 
 ![img](assets/screenshot.jpg)
 
@@ -28,19 +28,21 @@ By default the filter will work with a size variant if that's the only variant y
 
 ### Static or dynamic menu?
 
+As mentioned above, there are two options for generating the menu itself. There is a dynamic option that uses Liquid tags and outputs the available variants in an array, and there is a static option that is hard coded, and you can edit accordingly.
+
+Why in BFE would I want to use a static, hard coded version? Great question. The answer is because you might not like the order that the dynamic version outputs your variants in, and apart from using the `sort` filter to output them alphabetically, there's not much in the way of options there. Personally, for my use on devtees.com as a size filter, I wanted them to appear in logical order, which was impossible dynamically. Hence the hard coded option.
+
 ### Styling
 
 I've included a set of styles based on my use at [devtees.com](http://devtees.com). However, if you want to roll your own styles, just ignore the `assets/product-filter.css.liquid` file, and style in your own stylesheet however you like.
 
 Note: the default styles I've provided use Sass, as it's now supported by Shopify css files with the `.css.liquid` extension.
 
-### Menu options
-
 ## Limitations
 
 ## Resources
 
-Be sure to check out Shopify's CLI tool [shopify_theme](https://github.com/Shopify/shopify_theme) for directly uploading your locally edited theme files to your shop.
+- [shopify_theme](https://github.com/Shopify/shopify_theme) - Shopify's CLI tool for directly uploading your locally edited theme files to your shop.
 
 ## Contributing
 
