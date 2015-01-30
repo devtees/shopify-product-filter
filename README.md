@@ -44,4 +44,8 @@ Be sure to check out Shopify's CLI tool [shopify_theme](https://github.com/Shopi
 
 ## Contributing
 
+Found a bug? Want to improve the jQuery or Liquid logic? Pull requests welcome!
+
+See the [contributing docs](CONTRIBUTING.md) for contribution guidelines and more ways to contribute.
+
 ## License
