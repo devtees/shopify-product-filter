@@ -1,8 +1,8 @@
 # Shopify Product Filter
 
-*A simple, jQuery based product variant filter for Shopify stores*
+*A simple, jQuery based product variant filter for Shopify stores* :shirt: :mag:
 
-**DEMO**  See it in action at: **[devtees.com](http://devtees.com).**
+:rocket: **DEMO:**  See it in action at **[devtees.com](http://devtees.com).**
 
 ![img](assets/screenshot.jpg)
 
