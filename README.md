@@ -2,7 +2,7 @@
 
 *A simple, jQuery based product variant filter for Shopify stores* :shirt: :mag:
 
-:rocket: **DEMO:**  See it in action at **[devtees.com](http://devtees.com).**
+:rocket: **DEMO:**  See it in action at ~~**[devtees.com](http://devtees.com).**~~ (note: I'm no longer using this on devtees.com because I switched to a print on demand service that doesn't limit the sizes in stock; but if you have implemented the filter somewhere, let me know and I can add it to the Readme under an examples section!)
 
 ![img](assets/screenshot.jpg)
 
